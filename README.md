@@ -51,3 +51,8 @@ El sistema busca digitalizar y optimizar el proceso de reservas y hospedajes en 
 ## 📌 Estado actual
 ✅ Sprint 1 en desarrollo (registro de usuarios y gestión de habitaciones).  
 📅 Próximo Sprint: reservas y pagos en línea.
+
+
+## Mensaje de commit:
+
+Actualización del README con descripción y estructura Scrum
