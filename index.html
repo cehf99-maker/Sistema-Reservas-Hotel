@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema de Reservas - Hotel Clásico</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <!-- Logo simple SVG -->
+        <svg class="logo" width="48" height="48" viewBox="0 0 24 24" aria-hidden>
+          <rect x="2" y="6" width="20" height="12" rx="2" ry="2" fill="#e1c07a"/>
+          <circle cx="8" cy="12" r="1.5" fill="#052a50"/>
+          <circle cx="12" cy="12" r="1.5" fill="#052a50"/>
+          <circle cx="16" cy="12" r="1.5" fill="#052a50"/>
+        </svg>
+        <div>
+          <h1 class="hotel-name">Hotel Sol &amp; Mar</h1>
+          <p class="hotel-sub">Sistema de Reservas y Hospedaje</p>
+        </div>
+      </div>
+
+      <nav class="header-right">
+        <span class="chip">Sprint 1</span>
+        <button id="btnNew" class="btn small gold">Nueva reserva</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel form-panel" id="panelForm">
+      <h2>Registrar / Editar Reserva</h2>
+      <form id="reservaForm" class="form">
+        <input type="hidden" id="idReserva" value="">
+
+        <label for="nombre">Nombre del cliente</label>
+        <input id="nombre" type="text" placeholder="Ej: Ana Pérez" required>
+
+        <div class="row">
+          <div class="col">
+            <label for="fechaEntrada">Fecha de entrada</label>
+            <input id="fechaEntrada" type="date" required>
+          </div>
+          <div class="col">
+            <label for="fechaSalida">Fecha de salida</label>
+            <input id="fechaSalida" type="date" required>
+          </div>
+        </div>
+
+        <label for="tipoHabitacion">Tipo de habitación</label>
+        <select id="tipoHabitacion" required>
+          <option value="Individual">Individual</option>
+          <option value="Doble">Doble</option>
+          <option value="Suite">Suite</option>
+        </select>
+
+        <div class="row">
+          <div class="col">
+            <label for="adultos">Adultos</label>
+            <input id="adultos" type="number" min="1" value="1" required>
+          </div>
+          <div class="col">
+            <label for="ninos">Niños</label>
+            <input id="ninos" type="number" min="0" value="0">
+          </div>
+        </div>
+
+        <label for="notas">Notas (opcional)</label>
+        <textarea id="notas" rows="2" placeholder="Ej: llegada a partir de las 14:00"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn gold">Guardar</button>
+          <button type="button" id="btnCancel" class="btn ghost">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel list-panel">
+      <h2>Reservas registradas</h2>
+      <div id="emptyMessage" class="empty">Aún no hay reservas. Crea la primera.</div>
+      <ul id="listaReservas" class="lista"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Hotel Sol &amp; Mar — Proyecto académico · Grupo 1</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
